@@ -1,0 +1,143 @@
+1. Llevados por la emoción decidimos escribir un programa un poco más grande, al que llamamos "Crece.java":
+public class crece
+{
+public static void main(String [] Args)
+{
+System.out.println("Ya ocupo ");
+System.out.println("dos líneas ");
+}
+}
+Sin embargo, al intentar compilarlo nos da el siguiente error:
+Crece.java:1: class crece is public, should be declared in a file crece.java
+class crece {
+^
+1 error
+¿qué significa?
+
+Respuesta: Que la clase tiene un nombre diferente al archivo de codigo fuente y deben llamarse igual
+
+2. ¿Qué escribirá en pantalla este fragmento de programa?
+// operaciones entre booleanos
+boolean b1,b2;
+int x=5, y=x+3;
+b1= true && (x == y); //
+y = x;
+b2 = !b1 || (x != y); //
+System.out.println(b1);
+System.out.println(b2);
+
+3. Observa el siguiente código
+a. ¿Qué escribirá el programa cuando los valores de entrada son 9 y 11?
+b. ¿En qué casos escribirá el programa false true?
+c. ¿En qué casos escribirá el programa true true?
+
+import java.util.Scanner; // para leer de teclado
+public class Principal
+{
+public static void main(String[] args)
+{
+Scanner sc = new Scanner(System.in);
+int n1, n2;
+boolean b1= false,b2= false;
+n1 = sc.nextInt();
+n2 = sc.nextInt();
+if ((n2-n1) % 2 == 0)
+b1 = true;
+else
+b2 = true;
+System.out.print(b1+" ");
+System.out.println(b2);
+} // main
+}
+
+a. el programa escribira true false ya que 11-9= 2 % 2=0 y en ese caso el valor verdadero es b1
+b. cuando el resultado de ambos numeros sea un numero que al hacerle el resto no de 0 (un impar en este caso)
+c. en ningun caso por la condicion si/sino
+
+4. ¿Cuál será la salida del siguiente programa?
+public class Principal
+{
+public static void main(String[] args)
+{
+int x,y;
+x=y=2;
+x += 5;
+y *= x+1;
+System.out.println(x);
+System.out.println(y);
+} // main
+}
+
+x=7
+y=16
+
+5. ¿Qué escribirá este fragmento de programa en pantalla?
+double a=5.99999;
+int b;
+b = (int)5.8;
+System.out.println(b);
+b = (int)a;
+System.out.println(b);
+
+5 y 5 porque al pasar de tipo double a int se pierde informacion, en este caso el 0.8 y 0.9999
+
+6. ¿Qué escribirá el programa?
+public class Prueba
+{
+public static void main(String[] args)
+{
+String s1 = "Entonces, quedamos a las ";
+int hora1 = 11;
+String s2 ="?";
+String s3 = "No, mejor a las ";
+double hora2 = 11.45;
+System.out.println(s1+hora1+s2);
+System.out.println(s3+hora2+". Vale"+s2);
+} // main
+}
+
+Entonces, quedamos a las 11?
+No, mejor a las 11.45. Vale?
+
+El print esta imprimiendo 3 variables diferentes
+
+7. ¿Qué escribirá el programa?
+import java.util.Scanner;
+public class Principal
+{
+public static void main(String[] args)
+{
+Scanner sc = new Scanner(System.in);
+String nombre;
+System.out.print("¿Cómo te llamas? ");
+nombre = sc.nextLine();// lee una cadena System.out.println("Es un placer conocerte "+nombre);
+} // main
+}
+
+Primero como te llamas, y al introducir una cadena de caracteres devolvera esa cadena con un es un placer conocerte
+
+8. ¿Cómo cambiará el comportamiento del programa siguiente si cambiamos la instrucción System.out.println(x+" "+y);
+por System.out.println(x+y);?
+import java.util.Scanner;
+public class Principal{
+// lee dos enteros de teclado y los ordena de mayor a menor
+public static void main(String[] args)
+{
+// leemos los valores a comparar
+int x,y;
+Scanner sc = new Scanner(System.in);
+x=sc.nextInt();
+y=sc.nextInt();
+/* si x>y no hacemos nada, pero si x<=y intercambiamos los valores*/
+if (x<=y)
+{
+// intercambiar x con y
+......
+}
+// mostramos los valores ordenados
+System.out.println(x+" "+y);
+}
+}
+
+Sumara ambos enteros en vez de ponerlos por separado
+
